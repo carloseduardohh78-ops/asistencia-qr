@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, from flask import Flask, render_template, request, jsonify, send_file
 import os
 import csv
 from datetime import datetime
@@ -132,3 +132,10 @@ def subir():
 
 #if __name__ == '__main__':
 #     app.run(host='0.0.0.0', port=10000)
+
+@app.route('/descargar')
+def descargar_reporte():
+    try:
+        return send_file('Reporte_Asistencia_Orientacion.csv', as_attachment=True)
+    except Exception as e:
+        return "Aún no hay registros de asistencia para descargar."
