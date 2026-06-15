@@ -68,6 +68,9 @@ def index():
             let html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
             html5QrcodeScanner.render(onScanSuccess);
         </script>
+        <br><br>
+<a href="/descargar" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Descargar Reporte de Asistencia</a>
+<br><br>
     </body>
     </html>
     '''
